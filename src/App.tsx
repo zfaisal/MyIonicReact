@@ -23,6 +23,7 @@ import '@ionic/react/css/display.css';
 
 /* Theme variables */
 import './theme/variables.css';
+import Message from './pages/Message';
 
 const App: React.FC = () => {
 
@@ -32,8 +33,9 @@ const App: React.FC = () => {
         <IonSplitPane contentId="main">
           <Menu />
           <IonRouterOutlet id="main">
-            <Route path="/page/:name" component={Page} exact />
-            <Redirect from="/" to="/page/Inbox" exact />
+            <Route path="/page" component={Page} exact />
+            <Route path="/messagecenter" component={Message} />
+            {/* <Redirect from="/messagecenter" to="/page/Inbox" exact /> */}
           </IonRouterOutlet>
         </IonSplitPane>
       </IonReactRouter>

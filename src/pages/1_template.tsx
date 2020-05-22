@@ -15,19 +15,17 @@ const Page: React.FC = () => {
           <IonButtons slot="start">
             <IonMenuButton />
           </IonButtons>
-          <IonTitle>Home</IonTitle>
+          <IonTitle>{name}</IonTitle>
         </IonToolbar>
       </IonHeader>
 
       <IonContent>
         <IonHeader collapse="condense">
           <IonToolbar>
-            <IonTitle size="large">My Ionic Home</IonTitle>
+            <IonTitle size="large">{name}</IonTitle>
           </IonToolbar>
         </IonHeader>
-        <div>
-          Stuff  
-        </div>
+        <ExploreContainer name={name} />
       </IonContent>
     </IonPage>
   );
